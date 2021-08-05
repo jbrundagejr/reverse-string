@@ -1,5 +1,14 @@
 function reverseString(str) {
-  // type your code here
+  // create an empty array to push letters into
+  let newWord = []
+  // iterate over the passed in word starting at the end and making your way to the beginning
+  for(i = str.length; i > 0; i--){
+    // grab the last letter of the word and put it in the empty array
+    let lastLetter = str[i - 1]
+    newWord.push(lastLetter)
+  }
+  // make that new array into a string
+  return newWord.join("")
 }
 
 if (require.main === module) {
